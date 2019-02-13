@@ -70,17 +70,19 @@ class BookshelfState extends State<BookshelfScene> with RouteAware {
         this.favoriteNovels = favoriteNovels;
       });
     } catch (e) {
-      print(e);
+      Toast.show(e.toString());
     }
   }
 
   Widget buildActions(Color iconColor) {
     return Row(children: <Widget>[
       Container(
+        height: kToolbarHeight,
         width: 44,
         child: Image.asset('img/actionbar_checkin.png', color: iconColor),
       ),
       Container(
+        height: kToolbarHeight,
         width: 44,
         child: Image.asset('img/actionbar_search.png', color: iconColor),
       ),
